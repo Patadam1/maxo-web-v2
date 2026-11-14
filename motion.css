@@ -133,3 +133,11 @@
   .carta__pic img, .carta__vid { clip-path: none; transform: none; transition: opacity 200ms linear; }
   .carta__pic img.is-off, .carta__vid.is-off { opacity: 0; clip-path: none; transform: none; transition: opacity 200ms linear; }
 }
+
+/* ================= INICIO · FONDO DE BRASAS (hero-fire.js) ================= */
+.hero__fire { position: absolute; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; }
+.hero > :not(.hero__fire) { position: relative; z-index: 1; }
+@media (prefers-reduced-motion: no-preference) {
+  .hero__fire { animation: fire-in 1600ms var(--ease-out) both; }
+}
+@keyframes fire-in { from { opacity: 0; } to { opacity: 1; } }
